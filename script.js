@@ -8,7 +8,11 @@ document.getElementById("btn").addEventListener("click", () => {
 });
 
 document.getElementById("btn-min").addEventListener("click", () => {
-    showData(list.sort()[0]);
+    let min = list[0]
+    list.forEach(item => {
+        if(item <min) min = item;
+    })
+    showData(min);
 });
 
 function showData(data){
